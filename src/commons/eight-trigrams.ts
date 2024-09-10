@@ -36,44 +36,52 @@ enum Direction {
 export const eightTrigramsDetail: Record<string, Record<string, any>> = {
   qian: {
     name: "乾",
+    logo: "☰",
     // 先天八卦指代方位
-    earlierHeavenDirection: Direction.SOUTH,
+    preHeavenDirection: Direction.SOUTH,
     // 卦爻从下往上看代表的二进制数字，0是阴爻 1是阳爻
     binary: 0b111,
   },
   kun: {
     name: "坤",
-    earlierHeavenDirection: Direction.NORTH,
+    logo: "☷",
+    preHeavenDirection: Direction.NORTH,
     binary: 0b000,
   },
   zhen: {
     name: "震",
-    earlierHeavenDirection: Direction.NORTHEAST,
+    logo: "☳",
+    preHeavenDirection: Direction.NORTHEAST,
     binary: 0b100,
   },
   xun: {
     name: "巽",
-    earlierHeavenDirection: Direction.SOUTHWEST,
+    logo: "☴",
+    preHeavenDirection: Direction.SOUTHWEST,
     binary: 0b011,
   },
   kan: {
     name: "坎",
-    earlierHeavenDirection: Direction.WEST,
+    logo: "☵",
+    preHeavenDirection: Direction.WEST,
     binary: 0b010,
   },
   li: {
     name: "离",
-    earlierHeavenDirection: Direction.EAST,
+    logo: "☲",
+    preHeavenDirection: Direction.EAST,
     binary: 0b101,
   },
   gen: {
     name: "艮",
-    earlierHeavenDirection: Direction.NORTHWEST,
+    logo: "☶",
+    preHeavenDirection: Direction.NORTHWEST,
     binary: 0b001,
   },
   dui: {
     name: "兑",
-    earlierHeavenDirection: Direction.SOUTHEAST,
+    logo: "☱",
+    preHeavenDirection: Direction.SOUTHEAST,
     binary: 0b110,
   },
 };

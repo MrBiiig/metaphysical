@@ -1,3 +1,22 @@
+// 这里是你的全局变量
+@color-qian: #87ceeb;
+@color-kun: #f1c40f;
+@color-zhen: #6a4574;
+@color-xun: #ff88a2;
+@color-kan: #333333;
+@color-li: #e63946;
+@color-gen: #9b870c;
+@color-dui: #f8f9fa;
+
+@color-qian-inverse: shade(spin(@color-qian, 180)); // 乾卦的补色
+@color-kun-inverse: shade(spin(@color-kun, 180)); // 坤卦的补色
+@color-zhen-inverse: tint(spin(@color-zhen, 180)); // 震卦的补色
+@color-xun-inverse: shade(spin(@color-xun, 180)); // 巽卦的补色
+@color-kan-inverse: tint(spin(@color-kan, 180)); // 坎卦的补色
+@color-li-inverse: tint(spin(@color-li, 180)); // 离卦的补色
+@color-gen-inverse: tint(spin(@color-gen, 180)); // 艮卦的补色
+@color-dui-inverse: shade(spin(@color-dui, 180)); // 兑卦的补色
+
 .qian-color {
   color: @color-qian;
 }
@@ -22,7 +41,6 @@
 .dui-color {
   color: @color-dui;
 }
-
 
 .qian-inverse-bgcolor {
   background-color: @color-qian-inverse;
