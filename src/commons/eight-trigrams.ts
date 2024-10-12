@@ -15,6 +15,7 @@ export const eightTrigramKeys = [
 ];
 
 // 八方方位 （数字表示的顺序是从南开始逆时针走4个到东北，然后从西南顺时针走到北）
+// 注意：先天八卦是没有东南西北的具体界定的，此处为方便代码逻辑和代码理解，弄了个上南、下北、左东、右西
 enum Direction {
   // 南
   SOUTH = 1,
@@ -39,6 +40,8 @@ export const eightTrigramsDetail: Record<string, Record<string, any>> = {
     logo: "☰",
     // 先天八卦指代方位
     preHeavenDirection: Direction.SOUTH,
+    // 后天八卦指代方位（注意：先天八卦是没有东南西北的具体界定的，此处为方便代码逻辑和代码理解，弄了个上南、下北、左东、右西）
+    postHeavenDirection: Direction.NORTHWEST,
     // 卦爻从下往上看代表的二进制数字，0是阴爻 1是阳爻
     binary: 0b111,
   },
@@ -46,42 +49,49 @@ export const eightTrigramsDetail: Record<string, Record<string, any>> = {
     name: "坤",
     logo: "☷",
     preHeavenDirection: Direction.NORTH,
+    postHeavenDirection: Direction.SOUTHWEST,
     binary: 0b000,
   },
   zhen: {
     name: "震",
     logo: "☳",
     preHeavenDirection: Direction.NORTHEAST,
+    postHeavenDirection: Direction.EAST,
     binary: 0b100,
   },
   xun: {
     name: "巽",
     logo: "☴",
     preHeavenDirection: Direction.SOUTHWEST,
+    postHeavenDirection: Direction.SOUTHEAST,
     binary: 0b011,
   },
   kan: {
     name: "坎",
     logo: "☵",
     preHeavenDirection: Direction.WEST,
+    postHeavenDirection: Direction.NORTH,
     binary: 0b010,
   },
   li: {
     name: "离",
     logo: "☲",
     preHeavenDirection: Direction.EAST,
+    postHeavenDirection: Direction.SOUTH,
     binary: 0b101,
   },
   gen: {
     name: "艮",
     logo: "☶",
     preHeavenDirection: Direction.NORTHWEST,
+    postHeavenDirection: Direction.NORTHEAST,
     binary: 0b001,
   },
   dui: {
     name: "兑",
     logo: "☱",
     preHeavenDirection: Direction.SOUTHEAST,
+    postHeavenDirection: Direction.WEST,
     binary: 0b110,
   },
 };
